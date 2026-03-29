@@ -1,0 +1,61 @@
+{
+  "extends": [
+    "config:recommended",
+    ":disableRateLimiting",
+    ":semanticCommits",
+    "group:allNonMajor"
+  ],
+  "timezone": "Europe/Kyiv",
+  "schedule": ["before 5am on Saturday"],
+  "updateNotScheduled": false,
+  "baseBranchPatterns": ["dev"],
+  "packageRules": [
+    {
+      "matchDepNames": ["@ethberry/eslint-config"],
+      "allowedVersions": "<6"
+    },
+    {
+      "matchPackageNames": ["@types/node"],
+      "allowedVersions": "<25"
+    },
+    {
+      "matchPackageNames": ["cron"],
+      "groupName": "@NestJS packages",
+      "rangeStrategy": "replace",
+      "enabled": false
+    },
+    {
+      "matchPackagePrefixes": ["@framework/"],
+      "enabled": false
+    },
+    {
+      "matchPackageNames": ["@okapps/**"],
+      "commitMessageTopic": "OkApps",
+      "groupName": "OkApps packages",
+      "groupSlug": "okapps-packages",
+      "rollbackPrs": false
+    },
+    {
+      "matchPackageNames": ["@nestjs/**"],
+      "commitMessageTopic": "NestJS",
+      "groupName": "NestJS packages",
+      "groupSlug": "nestjs-packages"
+    },
+    {
+      "matchPackageNames": ["@aws-sdk/**"],
+      "commitMessageTopic": "AWS SDK",
+      "groupName": "AWS packages",
+      "groupSlug": "aws-packages"
+    },
+    {
+      "matchUpdateTypes": ["minor", "patch"],
+      "automerge": false
+    }
+  ],
+  "major": {
+    "dependencyDashboardApproval": true
+  },
+  "dependencyDashboard": true,
+  "npmrc": "@okapps:registry=https://npm.pkg.github.com/",
+  "npmrcMerge": true
+}

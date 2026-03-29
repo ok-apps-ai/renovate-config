@@ -1,0 +1,12 @@
+{
+  "extends": [
+    "github>ok-apps-ai/renovate-config:rules"
+  ],
+  "hostRules": [
+    {
+      "matchHost": "https://npm.pkg.github.com/",
+      "hostType": "npm",
+      "token": "{{ secrets.GITHUB_TOKEN_OKAPPS }}"
+    }
+  ]
+}
