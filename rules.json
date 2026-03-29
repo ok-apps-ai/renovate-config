@@ -33,7 +33,7 @@
       "enabled": false
     },
     {
-      "matchPackageNames": ["@okapps/**"],
+      "matchPackageNames": ["@ok-apps-ai/**"],
       "commitMessageTopic": "OkApps",
       "groupName": "OkApps packages",
       "groupSlug": "okapps-packages",
@@ -60,6 +60,6 @@
     "dependencyDashboardApproval": true
   },
   "dependencyDashboard": true,
-  "npmrc": "@okapps:registry=https://npm.pkg.github.com/",
+  "npmrc": "@ok-apps-ai:registry=https://npm.pkg.github.com/",
   "npmrcMerge": true
 }
