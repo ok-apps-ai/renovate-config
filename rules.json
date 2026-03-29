@@ -11,6 +11,10 @@
   "baseBranchPatterns": ["dev"],
   "packageRules": [
     {
+      "matchPackageNames": ["eslint", "@eslint/js"],
+      "allowedVersions": "<10"
+    },
+    {
       "matchDepNames": ["@ethberry/eslint-config"],
       "allowedVersions": "<6"
     },
