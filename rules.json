@@ -46,7 +46,7 @@
       "groupSlug": "nestjs-packages"
     },
     {
-      "matchPackageNames": ["@aws-sdk/**"],
+      "matchPackageNames": ["@aws-sdk/**", "@smithy/**"],
       "commitMessageTopic": "AWS SDK",
       "groupName": "AWS packages",
       "groupSlug": "aws-packages"
